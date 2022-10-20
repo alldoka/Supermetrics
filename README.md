@@ -7,8 +7,12 @@ This application connects to a fictional social media network. One endpoint regi
 You should be running PHP 8.0+, the latest version of composer and available to use command line on your machine for any commands listed below. How you run PHP is up to you!
 
 * `guzzlehttp/guzzle` - to make API calls
-* `symfony/cache` - not to disturb the API much
+* `psr/simple-cache` - not to disturb the API much
 * `vlucas/phpdotenv` - to keep some config data out of files
+
+>If Symphony cache is a technical requirement - we should update composer.json
+
+>TODO Delete php-timer from the require section of composer.json?
 
 ## Local setup
 
@@ -35,7 +39,7 @@ Connect to container by running command `docker exec -it php_assignment /bin/bas
 2. **Change path:**
 Previous command should take you to path `/app`, but make sure of that by running command `cd /app`.
 
-4. **Run tests:**
+3. **Run tests:**
 Run the tests with command `./vendor/bin/phpunit`.
 
 ## Notes about the API endpoints

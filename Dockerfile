@@ -41,3 +41,5 @@ ENV APP_ENV="local"
 
 #RUN pecl install -f xdebug \
 #    && docker-php-ext-enable xdebug
+
+# improve Dockerfile. For example, add a separate nix user for security reasons. But this is out of the scope for the opened vacancy.
