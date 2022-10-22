@@ -39,7 +39,9 @@ class NoopCalculator extends AbstractCalculator
      */
     protected function doCalculate(): StatisticsTo
     {
-        return (new StatisticsTo())->setValue(value: $this->postsCount / $this->usersCount);
+        $value = $this->usersCount ? $this->postsCount / $this->usersCount : 0;
+
+        return (new StatisticsTo())->setValue($value);
     }
 
 }
