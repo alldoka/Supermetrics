@@ -11,7 +11,19 @@ services:
       target: local
     ports:
       - "7777:80"
+    volumes:
+      - ./:/app:delegated
 
 networks:
   default:
     name: sm_assignment
+
+# add dot to the docker folder `.docker`
+# move docker configuration .env.example to this folder. Separate the docker config from the application config
+# add xdebug config
+# configule volume for error log directory
+# configure volume for sources (mirroring)
+# add versioning to services to be able to run several versions in parallel while development
+# restart: unless-stopped
+# I would suggest to use nginx + php-fpm. Separate php process from the webserver is better for scalability, security, stability, workers and other pros. This discussion is out of the scope.
+# upgrade php to the latest version 8.1 if possible
